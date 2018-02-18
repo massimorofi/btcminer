@@ -84,6 +84,7 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
+					<finalName>btcminer</finalName>
 				</configuration>
 				<executions>
 					<execution>
