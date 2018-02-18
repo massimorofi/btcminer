@@ -1,0 +1,17 @@
+ #jar deployment
+
+- name: deploy-jar
+  hosts: all
+  remote_user: pine64
+  vars:
+    timestamp: ""
+
+  tasks:
+      - copy: 
+         src: target/btcminer-*.jar 
+         dest: /home/pine64/btcminer/btcminer.jar
+         owner: foo
+         group: foo
+  
+  
+  
