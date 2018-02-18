@@ -1,0 +1,2 @@
+# btcminer
+Exploring blockchain
