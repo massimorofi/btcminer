@@ -82,7 +82,7 @@ public class MineNewBlock {
 			logger.info("New block...best Block hash: " + lastHash);
 			String bestBlock = client.getBestBlock(lastHash).toString();
 			logger.info("Best block header: " + bestBlock.toString());
-			Block block = MiningUtils.createBlockToMine(netParams,client);
+			Block block = MUtils.createBlockToMine(netParams,client);
 			int cores = Runtime.getRuntime().availableProcessors();
 			logger.info("Number of cores " + cores);
 			runSolvers(client, block, cores - 1);

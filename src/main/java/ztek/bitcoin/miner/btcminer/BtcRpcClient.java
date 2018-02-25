@@ -75,6 +75,13 @@ public class BtcRpcClient {
 		return (JSONObject) call(command);
 	}
 
+	public JSONObject getBlockHeader(String hash, boolean isHex) throws AuthenticationException, JSONException, ClientProtocolException, IOException {
+		int id = counter.incrementAndGet();
+		String command = "{\"id\": " + id + ", \"method\": \"getblockheader\", \"params\": [\"" + hash + "\"" + "," + isHex + "]}";
+		//logger.info(command);
+		return (JSONObject) call(command);
+	}
+
 	/**
 	 * @return the host
 	 */
